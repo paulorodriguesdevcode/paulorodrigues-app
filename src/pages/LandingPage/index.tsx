@@ -87,6 +87,19 @@ return (
           <button type="button" onClick={() => alert('foi')}>EMBARCAR</button>
         </form>
       </section>
+      
+      <hr/>
+
+      <footer>
+        <div className="icons">
+          <img src="src/assets/icon-instagram.svg" alt="Icone com um link para o instagram do Paulo Rodrigues."/>
+          <img src="src/assets/icon-github.svg" alt="Icone com um link para o github do Paulo Rodrigues."/>
+          <img src="src/assets/icon-whatsapp.svg" alt="Icone com um link para o whatsapp do Paulo Rodrigues."/>
+          <img src="src/assets/icon-youtube.svg" alt="Icone com um link para o youtube do Paulo Rodrigues."/>
+        </div>
+        <p>Desenvolvido com &#9829; por Paulo Rodrigues</p>
+
+      </footer>
     </main>
 );
 }
