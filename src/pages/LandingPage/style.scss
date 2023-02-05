@@ -168,6 +168,11 @@ main {
 
         .how-sigin{
             width: 50%;
+
+            @media screen and (max-width: 600px){
+                margin-top: pxToRem(50);      
+            };
+            
             @include fillFullWidthInSmallScreen();
 
             h2 {
@@ -218,7 +223,11 @@ main {
             @include fillFullWidthInSmallScreen();
             justify-content: stretch;
             margin-top: 5%;
-            border: 20px red;
+            border: pxToRem(10) $lightColor solid;
+
+            h2{
+                color: white;
+            }
 
             .input-group {
                 display: flex;

@@ -1,4 +1,11 @@
 import "./style.scss";
+import profileImage from '@assets/photo-profile.svg'
+import instagramIcon from '@assets/icon-instagram.svg'
+import githubIcon from '@assets/icon-github.svg'
+import whatsAppIcon from '@assets/icon-whatsapp.svg'
+import youtubeIcon from '@assets/icon-youtube.svg'
+
+
 
 export function LandingPage() {
 return (
@@ -30,7 +37,7 @@ return (
           De lá pra cá, passei por muitas empresas, desde empresas pequenas, fábricas de software até empresas com
           faturamentos bilionários.
         </p>
-        <img src="src/assets/photo-profile.svg" alt="Uma foto de perfil do autor do curso, Paulo Rodrigues"
+        <img src={profileImage} alt="Uma foto de perfil do autor do curso, Paulo Rodrigues"
           title="foto de Paulo Rodrigues" />
       </section>
       <hr />
@@ -71,11 +78,10 @@ return (
             Bom, além de programador eu há pelo menos 11 anos cuido de pessoas e hoje sou Pastor.
             O que é que isso tem a ver?
             Nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido e é por isso que se existe algo que você pode apostar nesse curso é DIDÁTICA.
-            VAMOS EMBARCAR JUNTOS?
-            PREENCHA O FORM AO LADO E VAMOS DESCOBRIR ESSE UNIVERSO JUNTOS!
           </p>
         </article>
         <form className="form-email">
+          <h2>QUERO ME TORNAR UM DEV</h2>
           <div className="input-group">
             <label htmlFor="name">SEU NOME</label>
             <input type="text" id="name"/>
@@ -92,13 +98,20 @@ return (
 
       <footer>
         <div className="icons">
-          <img src="src/assets/icon-instagram.svg" alt="Icone com um link para o instagram do Paulo Rodrigues."/>
-          <img src="src/assets/icon-github.svg" alt="Icone com um link para o github do Paulo Rodrigues."/>
-          <img src="src/assets/icon-whatsapp.svg" alt="Icone com um link para o whatsapp do Paulo Rodrigues."/>
-          <img src="src/assets/icon-youtube.svg" alt="Icone com um link para o youtube do Paulo Rodrigues."/>
+          <a href="https://www.instagram.com/paulorodriguesdev/" target="_blank">
+            <img src={instagramIcon} alt="Icone com um link para o instagram do Paulo Rodrigues."/>
+          </a>  
+          <a href="https://github.com/paulorodriguesdevcode" target="_blank">
+            <img src={githubIcon} alt="Icone com um link para o github do Paulo Rodrigues."/>
+          </a>
+          <a href="https://wa.me/5531991597777" target="_blank">
+            <img src={whatsAppIcon} alt="Icone com um link para o whatsapp do Paulo Rodrigues."/>
+          </a>
+          <a href="https://www.youtube.com/@paulorodriguesdevcode" target="_blank">
+           <img src={youtubeIcon} alt="Icone com um link para o youtube do Paulo Rodrigues."/>
+          </a>
         </div>
         <p>Desenvolvido com &#9829; por Paulo Rodrigues</p>
-
       </footer>
     </main>
 );
