@@ -6,8 +6,36 @@ import githubIcon from '@assets/icon-github.svg'
 import whatsAppIcon from '@assets/icon-whatsapp.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
 
+interface ISocialMedias{
+  icon: string,
+  src: string,
+  name: string
+}
+
 export function LandingPage() {
-return (
+  const socialMedias:ISocialMedias[] = [
+      { 
+      icon:instagramIcon, 
+      src:'https://www.instagram.com/paulorodriguesdev/',
+      name: 'instagram'
+    },
+    { 
+      icon:githubIcon, 
+      src:'https://github.com/paulorodriguesdevcode',
+      name: 'github'
+    },
+    { 
+      icon:whatsAppIcon, 
+      src:'https://wa.me/5531991597777',
+      name: 'whatsApp'
+    },
+    { 
+      icon:youtubeIcon, 
+      src:'https://www.youtube.com/@paulorodriguesdevcode',
+      name: 'youtube'
+    }]
+
+  return (
     <main>
       <header>
         <img src={principalLogo}
@@ -99,22 +127,15 @@ return (
       <hr/>
 
       <footer>
-        <div className="icons">
-          <a href="https://www.instagram.com/paulorodriguesdev/" target="_blank">
-            <img src={instagramIcon} alt="Icone com um link para o instagram do Paulo Rodrigues."/>
-          </a>  
-          <a href="https://github.com/paulorodriguesdevcode" target="_blank">
-            <img src={githubIcon} alt="Icone com um link para o github do Paulo Rodrigues."/>
-          </a>
-          <a href="https://wa.me/5531991597777" target="_blank">
-            <img src={whatsAppIcon} alt="Icone com um link para o whatsapp do Paulo Rodrigues."/>
-          </a>
-          <a href="https://www.youtube.com/@paulorodriguesdevcode" target="_blank">
-           <img src={youtubeIcon} alt="Icone com um link para o youtube do Paulo Rodrigues."/>
-          </a>
+        <div className="socialMedias">
+          {socialMedias.map((socialMedia) => (
+          <a href={socialMedia.src} target="_blank" key={('link-'+socialMedia.name)}>
+            <img src={socialMedia.icon} key={('icon-'+socialMedia.name)} alt={`Icone com um link para o ${socialMedia.name} do Paulo Rodrigues.`}/>
+          </a>)  
+          )}
         </div>
         <p>Desenvolvido com &#9829; por Paulo Rodrigues</p>
       </footer>
     </main>
-);
+  );
 }
