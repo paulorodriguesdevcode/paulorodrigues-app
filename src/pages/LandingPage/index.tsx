@@ -19,14 +19,17 @@ return (
             Te pegar pelas mãos do absoluto zero e te mostrar o essencial do Javascript até que você se torne um desenvolvedor com domínio nessa tecnologia.
           </p>
           <button>
-            QUERO EMBARCAR
+            <a href="#form-email">
+              QUERO EMBARCAR
+            </a>
           </button>
         </section>
       </header>
       <hr />      
       <section className="about-me">
         <p>
-          Minha primeira linha de código foi escrita em 2012, nesse ano lá estava eu em uma sala de um curso técnico com a
+          <strong>Minha primeira linha de código foi escrita em 2012.</strong><br/>
+          Nesse ano lá estava eu em uma sala de um curso técnico com a
           maioria dos alunos odiando a matéria de Lógica de Programação.
           Algum tempo passou, comecei a trabalhar como técnico em informática em uma “Big Tech” onde haviam muitos
           desenvolvedores, fiz amizades e descobri a disparidade salarial, nessa época meu salário era de 1920.00R$ (não era
@@ -79,7 +82,7 @@ return (
             Nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido e é por isso que se existe algo que você pode apostar nesse curso é DIDÁTICA.
           </p>
         </article>
-        <form className="form-email">
+        <form className="form-email" id="form-email">
           <h2>QUERO ME TORNAR UM DEV</h2>
           <div className="input-group">
             <label htmlFor="name">SEU NOME</label>

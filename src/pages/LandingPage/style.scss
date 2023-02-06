@@ -16,7 +16,7 @@
     background-color: white;
  }
 
- @mixin container {
+@mixin container {
     background-image: url('@assets/background-code.svg');
     display: flex;
     flex-wrap:wrap ;
@@ -34,11 +34,12 @@
     @media screen and (max-width: 600px) {
         width: 100%;
     }    
+    margin-top: 5%;
 }
 
- body {
+body {
     background-color:  $primaryColor
- }
+}
 
 main {
     display: flex;
@@ -103,8 +104,12 @@ main {
                 cursor: pointer;
                 border: none;
                 border-radius: pxToRem(10);
-                color: $primaryColor;
                 font-weight: bold;
+
+                a {
+                    color: $primaryColor;
+                    text-decoration:none;
+                }
 
                 &:hover {
                     width: pxToRem(302);
@@ -221,7 +226,7 @@ main {
             margin-left: pxToRem(20);
             @include fillFullWidthInSmallScreen();
             justify-content: stretch;
-            margin-top: 5%;
+            
             border: pxToRem(10) $lightColor solid;
 
             h2{
