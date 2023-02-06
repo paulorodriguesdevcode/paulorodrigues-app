@@ -5,6 +5,8 @@ import instagramIcon from '@assets/icon-instagram.svg'
 import githubIcon from '@assets/icon-github.svg'
 import whatsAppIcon from '@assets/icon-whatsapp.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
+import { sendEmail } from "../../api";
+import { useState } from 'react'
 
 interface ISocialMedias{
   icon: string,
@@ -34,6 +36,9 @@ export function LandingPage() {
       src:'https://www.youtube.com/@paulorodriguesdevcode',
       name: 'youtube'
     }]
+
+  const [name, setName] = useState<string>("")
+  const [email, setEmail] = useState<string>("")
 
   return (
     <main>
@@ -114,13 +119,13 @@ export function LandingPage() {
           <h2>QUERO ME TORNAR UM DEV</h2>
           <div className="input-group">
             <label htmlFor="name">SEU NOME</label>
-            <input type="text" id="name"/>
+            <input type="text" id="name" onChange={(event) => setName(event.target.value)}/>
           </div>      
           <div className="input-group">
             <label htmlFor="email">SEU MELHOR EMAIL</label>
-            <input type="text" id="email"/>
+            <input type="text" id="email" onChange={(event) => setEmail(event.target.value)}/>
           </div>
-          <button type="button" onClick={() => alert('foi')}>EMBARCAR</button>
+          <button type="button" onClick={() => sendEmail({email, name})}>EMBARCAR</button>
         </form>
       </section>
       

@@ -51,7 +51,7 @@ main {
         margin-top: pxToRem(30), pxToRem(30);
         margin-bottom: pxToRem(30);
         border: pxToRem(2.5) solid $lightColor;
-        border-radius: 5px;
+        border-radius: pxToRem(5);
         transition: 0.9s;
         opacity: 20%;
 
@@ -227,8 +227,6 @@ main {
             @include fillFullWidthInSmallScreen();
             justify-content: stretch;
             
-            border: pxToRem(10) $lightColor solid;
-
             h2{
                 color: white;
             }
