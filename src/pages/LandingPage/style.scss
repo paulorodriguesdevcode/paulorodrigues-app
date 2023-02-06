@@ -157,8 +157,8 @@ main {
 
 
             h2{
+                color: $lightColor;
                 width: 100%;
-                color: white;
             }
             p{
                 width: 100%;
@@ -180,7 +180,7 @@ main {
             @include fillFullWidthInSmallScreen();
 
             h2 {
-                color: white;
+                color: $lightColor;
                 text-align: center;
                 width: 100%;
             }
@@ -207,7 +207,7 @@ main {
 
             h2{
                 width: 100%;
-                color: white;
+                color: $lightColor;
             }
             p{
                 width: 100%;
@@ -228,7 +228,8 @@ main {
             justify-content: stretch;
             
             h2{
-                color: white;
+                color: $lightColor;
+                width: 100%;
             }
 
             .input-group {
