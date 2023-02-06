@@ -4,7 +4,7 @@
     background: black;
  }
 ::-webkit-scrollbar-button       { 
-    background: $color-white;
+    background: $primaryColor;
  }
 ::-webkit-scrollbar-track        { 
     background: $primaryColor;
@@ -13,11 +13,11 @@
     background-color: $anotherColor;
  }
 ::-webkit-scrollbar-thumb        { 
-    background-color: $color-white;
+    background-color: white;
  }
 
  @mixin container {
-    background-image: url('src/assets/background-code.svg');
+    background-image: url('@assets/background-code.svg');
     display: flex;
     flex-wrap:wrap ;
     justify-content: center;
@@ -41,7 +41,6 @@
  }
 
 main {
-    background-image: url('src/assets/background-code.svg');
     display: flex;
     flex-wrap: wrap;
     max-width: 100vw;
@@ -80,7 +79,7 @@ main {
             h2 {
                 margin: pxToRem(30) pxToRem(3) pxToRem(3) ;
                 font-size: pxToRem(80);
-                color: $color-white;
+                color: white;
                 width: 100%;
                 font-family: Fira Sans Condensed;                
                 font-weight: 600;
@@ -100,7 +99,7 @@ main {
                 width: pxToRem(300);
                 height: pxToRem(50);
                 margin-top: pxToRem(30);
-                background-color: $color-white;
+                background-color: white;
                 cursor: pointer;
                 border: none;
                 border-radius: pxToRem(10);
@@ -123,7 +122,7 @@ main {
         p {
             width: 50%;
             font-size: pxToRem(30);
-            color: $color-white;
+            color: white;
             text-align: center;
             font-family: Fira Sans Condensed;
             line-height: pxToRem(40);
@@ -154,12 +153,12 @@ main {
 
             h2{
                 width: 100%;
-                color: $color-white;
+                color: white;
             }
             p{
                 width: 100%;
                 font-size: pxToRem(30);
-                color: $color-white;
+                color: white;
                 text-align: center;
                 font-family: Fira Sans Condensed;
                 line-height: pxToRem(40);
@@ -183,7 +182,7 @@ main {
             p {
                 width: 100%;
                 font-size: pxToRem(30);
-                color: $color-white;
+                color: white;
                 text-align: center;
                 font-family: Fira Sans Condensed;
                 line-height: pxToRem(40);
@@ -203,12 +202,12 @@ main {
 
             h2{
                 width: 100%;
-                color: $color-white;
+                color: white;
             }
             p{
                 width: 100%;
                 font-size: pxToRem(30);
-                color: $color-white;
+                color: white;
                 text-align: center;
                 font-family: Fira Sans Condensed;
                 line-height: pxToRem(40);
@@ -235,7 +234,7 @@ main {
 
                 label{
                     width: 100%;
-                    color: $color-white;
+                    color: white;
                     font-weight: bold;
                     margin-top: 5%;
                     margin-bottom: 2%;
@@ -252,7 +251,7 @@ main {
                 width: 100%;
                 height: pxToRem(50);
                 margin-top: pxToRem(30);
-                background-color: $color-white;
+                background-color: white;
                 cursor: pointer;
                 border: none;
                 border-radius: pxToRem(10);

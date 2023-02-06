@@ -19,7 +19,6 @@ $secondaryColor: #CB41E0;
 $lightColor: #F554F7;
 $anotherColor: #E041C3;
 $strongColor: #FC49B5;
-$color-white: #FFF;
 
 @function pxToRem($value) {
     $remValue: (math.div($value, 16)) + rem;	

@@ -1,17 +1,16 @@
 import "./style.scss";
+import principalLogo from '@assets/logo-principal.svg'
 import profileImage from '@assets/photo-profile.svg'
 import instagramIcon from '@assets/icon-instagram.svg'
 import githubIcon from '@assets/icon-github.svg'
 import whatsAppIcon from '@assets/icon-whatsapp.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
 
-
-
 export function LandingPage() {
 return (
     <main>
       <header>
-        <img src="src/assets/logo-principal.svg"
+        <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
           title="logo da marca paulorodriguesdev" />
         <section className="goal">
