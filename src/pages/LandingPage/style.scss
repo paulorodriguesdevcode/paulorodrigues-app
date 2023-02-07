@@ -182,17 +182,18 @@ main {
             @include fillFullWidthInSmallScreen();
 
 
-            h2{
+            h2 {
                 color: $lightColor;
                 width: 100%;
             }
-            p{
-                width: 100%;
-                font-size: pxToRem(30);
-                color: white;
-                text-align: center;
-                font-family: Fira Sans Condensed;
-                line-height: pxToRem(40);
+
+            ul li {
+                    width: 100%;
+                    font-size: pxToRem(30);
+                    color: white;
+                    text-align: center;
+                    font-family: Fira Sans Condensed;
+                    line-height: pxToRem(40);
             }
         }
 
@@ -274,6 +275,9 @@ main {
                     height: pxToRem(30);
                     border: none;
                     border-radius: pxToRem(10);
+                    color: $primaryColor;
+                    font-family: Fira Sans Condensed;
+                    text-align: center;
                 }                
             }
 
@@ -305,7 +309,7 @@ main {
         align-items: center;
         width: 100%;
 
-        .icons{
+        .socialMedias{
             width: 100%;
             display: flex;
             justify-content: center;
@@ -321,7 +325,6 @@ main {
             margin-bottom: pxToRem(20);
             font-size: pxToRem(12);
             font-family: Fira Sans Condensed;
-            font-weight: 600;
             line-height: pxToRem(30);
         }
     }

@@ -126,12 +126,11 @@ export function LandingPage() {
           <h2>
             SOBRE O CURSO
           </h2>
-          <p>
-            Para alinhar expectativas quero ser bem sincero com você ESSE CURSO é para quem:
-            Quer construir uma base sólida do javascript.
-            Pessoas que talvez nunca escreveram 1 linha se quer de código.
-            Quem talvez já é desenvolvedor mas não conhece o javascript como linguagem de programação.
-          </p>
+          <ul>
+            <li>Quem deseja construir uma base sólida do javascript.</li>
+            <li>Pessoas que talvez nunca escreveram 1 linha se quer de código.</li>
+            <li>Quem talvez já é desenvolvedor mas não conhece o javascript como linguagem de programação.</li>
+          </ul>
         </article>
 
         <article className="how-sigin">
@@ -139,9 +138,9 @@ export function LandingPage() {
             COMO ME INSCREVER?
           </h2>
           <p>
-            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para 20/02, você pode garantir
+            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para 08/03/2023, você pode garantir
             sua vaga preenchendo o formulário abaixo com o seu melhor e-mail e ficando de olho para não perder essa
-            OPORTUNIDADE que pode transformar sua vida.
+          <strong> OPORTUNIDADE que pode transformar sua vida. </strong> 
           </p>
         </article>
       </section>
@@ -156,7 +155,9 @@ export function LandingPage() {
             Tem muita gente por ai ensinando programação, então porque mais um?
             Bom, além de programador eu há pelo menos 11 anos cuido de pessoas e hoje sou Pastor.
             O que é que isso tem a ver?
-            Nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido e é por isso que se existe algo que você pode apostar nesse curso é DIDÁTICA.
+            Independente da minha opção religiosas, algo é inegável: 
+            nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido 
+            e é por isso que se existe algo que você pode apostar nesse curso é <strong>DIDÁTICA</strong>.
           </p>
         </article>
         <form className="form-email" id="form-email">
@@ -183,7 +184,7 @@ export function LandingPage() {
           </a>)  
           )}
         </div>
-        <p>Desenvolvido com &#9829; por Paulo Rodrigues</p>
+        <p>Desenvolvido com &#9829; por <strong>Paulo Rodrigues</strong></p>
       </footer>
     </main>
   );
