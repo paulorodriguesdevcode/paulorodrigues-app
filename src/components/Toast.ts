@@ -6,9 +6,10 @@ interface IAlert {
 }
 
 export enum MessagesToastEnum {
-    successEmail = "Segure a ansiedade :) Já está tudo certo! Agora é só esperar em breve entraremos em contato.",
+    successEmail = "Email enviado! Segure a ansiedade :) Agora é só esperar em breve entraremos em contato.",
     errorEmail = "Ocorreu um erro no processo de envio de email, por favor, tente mais tarde.", 
-    errorFieldsMandatory = "Por favor, preencha seu nome e email."
+    errorFieldsMandatory = "Por favor, preencha seu nome e email.",
+    sendingEmail = "Email sendo enviado..."
 }
 
 export const Alert = ({message, isLoading = false}:IAlert) => toast(message,{

@@ -47,9 +47,10 @@ export function LandingPage() {
     }
 
     try{
-      // await sendEmail({email, name})
       setFormIsEnable(false)
       clearInputs()
+      Alert({message: MessagesToastEnum.sendingEmail})
+      await sendEmail({email, name})
       Alert({message: MessagesToastEnum.successEmail})
     }catch(e){
       Alert({message: MessagesToastEnum.errorEmail})
@@ -78,23 +79,6 @@ export function LandingPage() {
           <p>
             Te pegar pelas mãos do absoluto zero e te mostrar o essencial do Javascript até que você se torne um desenvolvedor com domínio nessa tecnologia.
           </p>
-          {/* <div className="count-down">
-            <div className="days">
-              <span>05</span>
-            </div>
-            <span>:</span>
-            <div className="hours">
-              <span>10</span>
-            </div>
-            <span>:</span>
-            <div className="minutes">
-              <span>14</span>
-            </div>
-            <span>:</span>
-            <div className="seconds">
-              <span>10</span>
-            </div>
-          </div> */}
           <button>
             <a href="#form-email">
               APROVEITAR OFERTA
@@ -168,7 +152,7 @@ export function LandingPage() {
           </div>      
           <div className="input-group">
             <label htmlFor="email">SEU MELHOR EMAIL</label>
-            <input type="text" value={email} id="email" disabled={!formIsEnable} onChange={(event) => setEmail(event.target.value)}/>
+            <input type="email" value={email} id="email" disabled={!formIsEnable} onChange={(event) => setEmail(event.target.value)}/>
           </div>
           <button type="button" onClick={sendFormEmail} disabled={!formIsEnable}>EMBARCAR</button>
         </form>
