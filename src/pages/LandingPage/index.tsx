@@ -29,11 +29,11 @@ export function LandingPage() {
       src:'https://github.com/paulorodriguesdevcode',
       name: 'github'
     },
-    { 
-      icon:whatsAppIcon, 
-      src:'https://wa.me/5531991597777',
-      name: 'whatsApp'
-    },
+    // { 
+    //   icon:whatsAppIcon, 
+    //   src:'https://wa.me/5531991597777',
+    //   name: 'whatsApp'
+    // },
     { 
       icon:youtubeIcon, 
       src:'https://www.youtube.com/@paulorodriguesdevcode',
