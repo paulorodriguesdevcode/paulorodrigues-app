@@ -48,7 +48,7 @@ main {
 
     hr{
         width: 80%;
-        margin-top: pxToRem(30), pxToRem(30);
+        margin-top: pxToRem(10);
         margin-bottom: pxToRem(30);
         border: pxToRem(2.5) solid $lightColor;
         border-radius: pxToRem(5);
@@ -63,6 +63,7 @@ main {
 
     header{
         @include container;
+        margin: pxToRem(20);
 
         img {
             margin: 0;
@@ -187,14 +188,18 @@ main {
                 width: 100%;
             }
 
-            ul li {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
                     width: 100%;
                     font-size: pxToRem(30);
                     color: white;
                     text-align: center;
                     font-family: Fira Sans Condensed;
                     line-height: pxToRem(40);
-            }
+                }
+            } 
         }
 
         .how-sigin{

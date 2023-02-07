@@ -4,4 +4,3 @@ MELHORIAS
 
 CORREÇÕES
 [ ] reduzir textos
-[ ] estilo dos titulos
