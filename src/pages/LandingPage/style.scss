@@ -96,6 +96,32 @@ main {
                 line-height: pxToRem(30);
             }
 
+            // .count-down{
+            //     display: flex;
+            //     width: 100%;
+            //     margin: pxToRem(5);
+            //     justify-content: center;
+            //     color: white;
+            //     align-items: center;
+
+            //     .days {
+            //         border: pxToRem(2) solid;
+            //         width: 5%;
+            //     }
+            //     .hours{
+            //         border: pxToRem(2) solid;
+            //         width: 5%;
+            //     }
+            //     .minutes {
+            //         border: pxToRem(2) solid;
+            //         width: 5%;
+            //     }
+            //     .seconds {
+            //         border: pxToRem(2) solid;
+            //         width: 5%;
+            //     }
+            // }
+
             button {
                 width: pxToRem(300);
                 height: pxToRem(50);

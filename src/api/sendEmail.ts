@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Alert } from '../components';
 
 interface IBodyEmail{
     name: string,

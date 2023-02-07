@@ -7,6 +7,9 @@ import whatsAppIcon from '@assets/icon-whatsapp.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
 import { sendEmail } from "../../api";
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Alert, MessagesToastEnum } from "../../components";
 
 interface ISocialMedias{
   icon: string,
@@ -37,11 +40,35 @@ export function LandingPage() {
       name: 'youtube'
     }]
 
+  const sendFormEmail = async () => {
+    if(!email || !email){
+      Alert({message: MessagesToastEnum.errorFieldsMandatory})
+      return
+    }
+
+    try{
+      // await sendEmail({email, name})
+      setFormIsEnable(false)
+      clearInputs()
+      Alert({message: MessagesToastEnum.successEmail})
+    }catch(e){
+      Alert({message: MessagesToastEnum.errorEmail})
+      setFormIsEnable(true)
+    }   
+  }
+
+  const clearInputs = () => {
+    setName("");
+    setEmail("");
+  }
+
   const [name, setName] = useState<string>("")
   const [email, setEmail] = useState<string>("")
+  const [formIsEnable, setFormIsEnable] = useState<boolean>(true)
 
   return (
     <main>
+          <ToastContainer/>
       <header>
         <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
@@ -51,9 +78,26 @@ export function LandingPage() {
           <p>
             Te pegar pelas mãos do absoluto zero e te mostrar o essencial do Javascript até que você se torne um desenvolvedor com domínio nessa tecnologia.
           </p>
+          {/* <div className="count-down">
+            <div className="days">
+              <span>05</span>
+            </div>
+            <span>:</span>
+            <div className="hours">
+              <span>10</span>
+            </div>
+            <span>:</span>
+            <div className="minutes">
+              <span>14</span>
+            </div>
+            <span>:</span>
+            <div className="seconds">
+              <span>10</span>
+            </div>
+          </div> */}
           <button>
             <a href="#form-email">
-              QUERO EMBARCAR
+              APROVEITAR OFERTA
             </a>
           </button>
         </section>
@@ -119,13 +163,13 @@ export function LandingPage() {
           <h2>QUERO ME TORNAR UM DEV</h2>
           <div className="input-group">
             <label htmlFor="name">SEU NOME</label>
-            <input type="text" id="name" onChange={(event) => setName(event.target.value)}/>
+            <input type="text" value={name} id="name" disabled={!formIsEnable} onChange={(event) => setName(event.target.value)}/>
           </div>      
           <div className="input-group">
             <label htmlFor="email">SEU MELHOR EMAIL</label>
-            <input type="text" id="email" onChange={(event) => setEmail(event.target.value)}/>
+            <input type="text" value={email} id="email" disabled={!formIsEnable} onChange={(event) => setEmail(event.target.value)}/>
           </div>
-          <button type="button" onClick={() => sendEmail({email, name})}>EMBARCAR</button>
+          <button type="button" onClick={sendFormEmail} disabled={!formIsEnable}>EMBARCAR</button>
         </form>
       </section>
       
