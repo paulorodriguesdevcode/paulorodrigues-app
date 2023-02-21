@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     background-image: url('@assets/background-code.svg');
-    
+
     .header-logo {
         display: flex;
         justify-content: center;
@@ -30,11 +30,11 @@
             align-items: center;
             justify-content: space-around;
             width: 60%;
-            
+
             @media (max-width: 600px) {
                 width: 100%;
             }
-            
+
             a {
                 background-color: #7C527C;
                 display: flex;
@@ -55,9 +55,7 @@
                 .network-img {
                     width: pxToRem(30);
                 }
-
             }
-
         }
     }
 
@@ -76,6 +74,4 @@
         }
 
     }
-
-
 }

@@ -6,7 +6,4 @@ CORREÇÕES
 [ ] reduzir textos
 
 
-ALTS ADICIONAR
 REFATORAR COMPONENTS
-px nao sempre pxToRem
-background /links

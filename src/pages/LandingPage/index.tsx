@@ -3,59 +3,53 @@ import principalLogo from '@assets/logo-principal.svg'
 import profileImage from '@assets/photo-profile.svg'
 import instagramIcon from '@assets/icon-instagram.svg'
 import githubIcon from '@assets/icon-github.svg'
-import whatsAppIcon from '@assets/icon-whatsapp.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
 import { sendEmail } from "../../api";
 import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Alert, MessagesToastEnum } from "../../components";
 
-interface ISocialMedias{
+interface ISocialMedias {
   icon: string,
   src: string,
   name: string
 }
 
 export function LandingPage() {
-  const socialMedias:ISocialMedias[] = [
-      { 
-      icon:instagramIcon, 
-      src:'https://www.instagram.com/paulorodriguesdev/',
+  const socialMedias: ISocialMedias[] = [
+    {
+      icon: instagramIcon,
+      src: 'https://www.instagram.com/paulorodriguesdev/',
       name: 'instagram'
     },
-    { 
-      icon:githubIcon, 
-      src:'https://github.com/paulorodriguesdevcode',
+    {
+      icon: githubIcon,
+      src: 'https://github.com/paulorodriguesdevcode',
       name: 'github'
     },
-    // { 
-    //   icon:whatsAppIcon, 
-    //   src:'https://wa.me/5531991597777',
-    //   name: 'whatsApp'
-    // },
-    { 
-      icon:youtubeIcon, 
-      src:'https://www.youtube.com/@paulorodriguesdevcode',
+    {
+      icon: youtubeIcon,
+      src: 'https://www.youtube.com/@paulorodriguesdevcode',
       name: 'youtube'
     }]
 
   const sendFormEmail = async () => {
-    if(!email || !email){
-      Alert({message: MessagesToastEnum.errorFieldsMandatory})
+    if (!email || !email) {
+      Alert({ message: MessagesToastEnum.errorFieldsMandatory })
       return
     }
 
-    try{
+    try {
       setFormIsEnable(false)
       clearInputs()
-      Alert({message: MessagesToastEnum.sendingEmail})
-      await sendEmail({email, name})
-      Alert({message: MessagesToastEnum.successEmail})
-    }catch(e){
-      Alert({message: MessagesToastEnum.errorEmail})
+      Alert({ message: MessagesToastEnum.sendingEmail })
+      await sendEmail({ email, name })
+      Alert({ message: MessagesToastEnum.successEmail })
+    } catch (e) {
+      Alert({ message: MessagesToastEnum.errorEmail })
       setFormIsEnable(true)
-    }   
+    }
   }
 
   const clearInputs = () => {
@@ -69,7 +63,7 @@ export function LandingPage() {
 
   return (
     <main className="content">
-          <ToastContainer/>
+      <ToastContainer />
       <header className="header-initial">
         <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
@@ -86,10 +80,10 @@ export function LandingPage() {
           </button>
         </section>
       </header>
-      <hr />      
+      <hr />
       <section className="about-me">
         <p>
-          <strong>Minha primeira linha de código foi escrita em 2012.</strong><br/>
+          <strong>Minha primeira linha de código foi escrita em 2012.</strong><br />
           Nesse ano lá estava eu em uma sala de um curso técnico com a
           maioria dos alunos odiando a matéria de Lógica de Programação.
           Algum tempo passou, comecei a trabalhar como técnico em informática em uma “Big Tech” onde haviam muitos
@@ -124,12 +118,12 @@ export function LandingPage() {
           <p>
             Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para 08/03/2023, você pode garantir
             sua vaga preenchendo o formulário abaixo com o seu melhor e-mail e ficando de olho para não perder essa
-          <strong> OPORTUNIDADE que pode transformar sua vida. </strong> 
+            <strong> OPORTUNIDADE que pode transformar sua vida. </strong>
           </p>
         </article>
       </section>
 
-      <hr />      
+      <hr />
       <section className="differential">
         <article className="text-explain">
           <h2>
@@ -139,8 +133,8 @@ export function LandingPage() {
             Tem muita gente por ai ensinando programação, então porque mais um?
             Bom, além de programador eu há pelo menos 11 anos cuido de pessoas e hoje sou Pastor.
             O que é que isso tem a ver?
-            Independente da minha opção religiosas, algo é inegável: 
-            nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido 
+            Independente da minha opção religiosas, algo é inegável:
+            nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido
             e é por isso que se existe algo que você pode apostar nesse curso é <strong>DIDÁTICA</strong>.
           </p>
         </article>
@@ -148,27 +142,26 @@ export function LandingPage() {
           <h2>QUERO ME TORNAR UM DEV</h2>
           <div className="input-group">
             <label htmlFor="name">SEU NOME</label>
-            <input type="text" value={name} id="name" disabled={!formIsEnable} onChange={(event) => setName(event.target.value)}/>
-          </div>      
+            <input type="text" value={name} id="name" disabled={!formIsEnable} onChange={(event) => setName(event.target.value)} />
+          </div>
           <div className="input-group">
             <label htmlFor="email">SEU MELHOR EMAIL</label>
-            <input type="email" value={email} id="email" disabled={!formIsEnable} onChange={(event) => setEmail(event.target.value)}/>
+            <input type="email" value={email} id="email" disabled={!formIsEnable} onChange={(event) => setEmail(event.target.value)} />
           </div>
           <button type="button" onClick={sendFormEmail} disabled={!formIsEnable}>EMBARCAR</button>
         </form>
       </section>
-      
-      <hr/>
+      <hr />
 
       <footer>
         <div className="social-medias">
           {socialMedias.map((socialMedia) => (
-          <a href={socialMedia.src} target="_blank" key={('link-'+socialMedia.name)}>
-            <img src={socialMedia.icon} key={('icon-'+socialMedia.name)} alt={`Icone com um link para o ${socialMedia.name} do Paulo Rodrigues.`}/>
-          </a>)  
+            <a href={socialMedia.src} target="_blank" key={('link-' + socialMedia.name)}>
+              <img src={socialMedia.icon} key={('icon-' + socialMedia.name)} alt={`Icone com um link para o ${socialMedia.name} do Paulo Rodrigues.`} />
+            </a>)
           )}
         </div>
-        <p>Desenvolvido com &#9829; por <strong>Paulo Rodrigues</strong></p>
+        <p className="copy">Desenvolvido com &#9829; por<strong> &#9889;Paulo Rodrigues&#9889;</strong></p>
       </footer>
     </main>
   );
