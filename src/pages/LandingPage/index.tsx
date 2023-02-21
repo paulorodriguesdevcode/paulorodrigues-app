@@ -68,9 +68,9 @@ export function LandingPage() {
   const [formIsEnable, setFormIsEnable] = useState<boolean>(true)
 
   return (
-    <main>
+    <main className="content">
           <ToastContainer/>
-      <header>
+      <header className="header-initial">
         <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
           title="logo da marca paulorodriguesdev" />
@@ -161,7 +161,7 @@ export function LandingPage() {
       <hr/>
 
       <footer>
-        <div className="socialMedias">
+        <div className="social-medias">
           {socialMedias.map((socialMedia) => (
           <a href={socialMedia.src} target="_blank" key={('link-'+socialMedia.name)}>
             <img src={socialMedia.icon} key={('icon-'+socialMedia.name)} alt={`Icone com um link para o ${socialMedia.name} do Paulo Rodrigues.`}/>

@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { LandingPage } from './pages/LandingPage';
-
+import { Links } from './pages/Links';
+ 
+ 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/*" element={<LandingPage/>} />
-    </Routes>
-  </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/javascript-sem-enrolacao" element={<LandingPage />} />
+          <Route path="/" element={<Links />} />
+        </Routes>
+    </Router>
   )
 }
 
