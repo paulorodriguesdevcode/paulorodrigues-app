@@ -4,7 +4,6 @@ import profileImage from '@assets/photo-profile.svg'
 import instagramIcon from '@assets/icon-instagram.svg'
 import githubIcon from '@assets/icon-github.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
-import { sendEmail } from "../../api";
 import { useState } from 'react'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -35,7 +34,7 @@ export function LandingPage() {
     }]
 
   const sendFormEmail = async () => {
-    if (!email || !email) {
+    if (!email || !name) {
       Alert({ message: MessagesToastEnum.errorFieldsMandatory })
       return
     }
@@ -44,7 +43,22 @@ export function LandingPage() {
       setFormIsEnable(false)
       clearInputs()
       Alert({ message: MessagesToastEnum.sendingEmail })
-      await sendEmail({ email, name })
+        try {          
+          await fetch('https://rod-tools.herokuapp.com/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Origin': '*'
+            },
+            body: JSON.stringify({
+              to: 'prpaulo07@hotmail.com',
+              subject: 'Novo dev interessado',
+              text: `Nome: ${name}, Email: ${email} enviado em: ${new Date()}`
+            }),
+          });
+        } catch (error) {
+          console.error(error);
+        }
       Alert({ message: MessagesToastEnum.successEmail })
     } catch (e) {
       Alert({ message: MessagesToastEnum.errorEmail })

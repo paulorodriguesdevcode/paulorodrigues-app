@@ -7,7 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/javascript-sem-enrolacao" element={<LandingPage />} />
-        <Route path="/" element={<Links />} />
+        <Route path="*" element={<Links />} />
       </Routes>
     </Router>
   )
