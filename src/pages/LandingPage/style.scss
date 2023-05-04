@@ -149,8 +149,8 @@
         }
 
         img {
-            width: 50%;
-            height: 70%;
+            width: 30%;
+            height: 50%;
             @include notShowedInSmallScreen();
         }
     }

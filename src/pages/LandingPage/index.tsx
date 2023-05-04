@@ -130,7 +130,7 @@ export function LandingPage() {
             COMO ME INSCREVER?
           </h2>
           <p>
-            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para 08/03/2023, você pode garantir
+            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para 05/06/2023, você pode garantir
             sua vaga preenchendo o formulário abaixo com o seu melhor e-mail e ficando de olho para não perder essa
             <strong> OPORTUNIDADE que pode transformar sua vida. </strong>
           </p>
