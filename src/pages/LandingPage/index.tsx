@@ -53,7 +53,7 @@ export function LandingPage() {
             body: JSON.stringify({
               to: 'prpaulo07@hotmail.com',
               subject: 'Novo dev interessado',
-              text: `Nome: ${name}, Email: ${email} enviado em: ${new Date()}`
+              text: `Nome: ${name}, \nEmail: ${email} \nenviado em: ${new Date()}`
             }),
           });
         } catch (error) {
