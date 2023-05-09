@@ -4,7 +4,8 @@
     background: black;
 }
 
-::-webkit-scrollbar-button, ::-webkit-scrollbar-track  {
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track {
     background: $primaryColor;
 }
 
@@ -17,12 +18,11 @@
 }
 
 @mixin container {
-    background-image: url('@assets/background-code.svg');
+    // background-image: url('@assets/background-code.svg');
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     min-height: 100vh;
-
 }
 
 @mixin notShowedInSmallScreen {
@@ -35,8 +35,6 @@
     @media screen and (max-width: 600px) {
         width: 100%;
     }
-
-    // margin-top: 5%;
 }
 
 .content {
@@ -66,7 +64,7 @@
 
         img {
             margin: 0;
-            width: pxToRem(200);
+            width: pxToRem(250);
         }
 
         .goal {
@@ -79,9 +77,11 @@
             h2 {
                 margin: pxToRem(30) pxToRem(3) pxToRem(3);
                 font-size: pxToRem(80);
+
                 @media screen and (max-width: 600px) {
                     font-size: pxToRem(50);
-                }             
+                }
+
                 color: white;
                 width: 100%;
                 font-family: Fira Sans Condensed;
@@ -92,9 +92,11 @@
             p {
                 margin-top: pxToRem(20);
                 font-size: pxToRem(40);
+
                 @media screen and (max-width: 600px) {
                     font-size: pxToRem(30);
                 }
+
                 color: $secondaryColor;
                 font-family: Fira Sans Condensed;
                 font-weight: 600;
@@ -134,6 +136,11 @@
     .about-me {
         @include container();
 
+        h2 {
+            color: $lightColor;
+            width: 100%;
+        }
+
         p {
             width: 50%;
             font-size: pxToRem(30);
@@ -163,7 +170,7 @@
         text-align: center;
 
         .about-course {
-            width: 50%;
+            width: 49%;
             @include fillFullWidthInSmallScreen();
 
 
@@ -172,25 +179,26 @@
                 width: 100%;
             }
 
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                margin: pxToRem(30);
+            p {
+                margin-top: pxToRem(30);
+                width: 100%;
+                font-size: pxToRem(30);
+                color: white;
+                text-align: left;
+                font-family: Fira Sans Condensed;
+                line-height: pxToRem(40);
 
-                li {
+                @media screen and (max-width: 600px) {
                     width: 100%;
-                    font-size: pxToRem(30);
-                    color: white;
-                    text-align: left;
-                    font-family: Fira Sans Condensed;
-                    line-height: pxToRem(40);
+                    font-size: pxToRem(20);
+                    line-height: pxToRem(30);
+                    margin: pxToRem(20);
                 }
             }
         }
 
-        .how-sigin {
-        
-            width: 50%;
+        .differential {
+            width: 49%;
 
             @media screen and (max-width: 600px) {
                 margin-top: pxToRem(50);
@@ -213,90 +221,72 @@
                 font-family: Fira Sans Condensed;
                 line-height: pxToRem(40);
 
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                    font-size: pxToRem(20);
+                    line-height: pxToRem(30);
+                    margin: pxToRem(20);
+                }
+
             }
         }
     }
 
-    .differential {
-        @include container();
-        width: 100vw;
-        text-align: center;
+    .form-send-email {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-left: pxToRem(20);
+        margin-bottom: pxToRem(40);
+        @include fillFullWidthInSmallScreen();
+        justify-content: stretch;
 
-        .text-explain {
-            width: 50%;
-            @include fillFullWidthInSmallScreen();
-
-            h2 {
-                width: 100%;
-                color: $lightColor;
+        h2 {
+            @media screen and (max-width: 600px) {
+                margin-top: pxToRem(50);
             }
 
-            p {
-                margin-top: pxToRem(30);
-                width: 100%;
-                font-size: pxToRem(30);
-                color: white;
-                text-align: left;
-                font-family: Fira Sans Condensed;
-                line-height: pxToRem(40);
-            }
+            color: $lightColor;
+            width: 100%;
         }
 
-        .form-email {
-            width: 40%;
+        .input-group {
             display: flex;
-            flex-direction: column;
-            margin-left: pxToRem(20);
-            @include fillFullWidthInSmallScreen();
-            justify-content: stretch;
+            flex-wrap: wrap;
 
-            h2 {
-                @media screen and (max-width: 600px) {
-                    margin-top: pxToRem(50);
-                }
-                color: $lightColor;
+            label {
                 width: 100%;
+                color: white;
+                font-weight: bold;
+                margin-top: 5%;
+                margin-bottom: 2%;
             }
 
-            .input-group {
-                display: flex;
-                flex-wrap: wrap;
-
-                label {
-                    width: 100%;
-                    color: white;
-                    font-weight: bold;
-                    margin-top: 5%;
-                    margin-bottom: 2%;
-                }
-
-                input {
-                    width: 100%;
-                    height: pxToRem(30);
-                    border: none;
-                    border-radius: pxToRem(10);
-                    color: $primaryColor;
-                    font-family: Fira Sans Condensed;
-                    text-align: center;
-                }
-            }
-
-            button {
+            input {
                 width: 100%;
-                height: pxToRem(50);
-                margin-top: pxToRem(30);
-                background-color: white;
-                cursor: pointer;
+                height: pxToRem(30);
                 border: none;
                 border-radius: pxToRem(10);
                 color: $primaryColor;
-                font-weight: bold;
+                font-family: Fira Sans Condensed;
+                text-align: center;
+            }
+        }
 
-                &:hover {
-                    width: 99%;
-                    height: pxToRem(49);
-                }
+        button {
+            width: 100%;
+            height: pxToRem(50);
+            margin-top: pxToRem(30);
+            background-color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: pxToRem(10);
+            color: $primaryColor;
+            font-weight: bold;
 
+            &:hover {
+                width: 99%;
+                height: pxToRem(49);
             }
         }
     }

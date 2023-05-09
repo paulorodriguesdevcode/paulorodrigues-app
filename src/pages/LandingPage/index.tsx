@@ -43,22 +43,22 @@ export function LandingPage() {
       setFormIsEnable(false)
       clearInputs()
       Alert({ message: MessagesToastEnum.sendingEmail })
-        try {          
-          await fetch('https://rod-tools.herokuapp.com/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Origin': '*'
-            },
-            body: JSON.stringify({
-              to: 'prpaulo07@hotmail.com',
-              subject: 'Novo dev interessado',
-              text: `Nome: ${name}, \nEmail: ${email} \nenviado em: ${new Date()}`
-            }),
-          });
-        } catch (error) {
-          console.error(error);
-        }
+      try {
+        await fetch('https://rod-tools.herokuapp.com/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Origin': '*'
+          },
+          body: JSON.stringify({
+            to: 'prpaulo07@hotmail.com',
+            subject: 'Novo dev interessado',
+            text: `Nome: ${name}, \nEmail: ${email} \nenviado em: ${new Date()}`
+          }),
+        });
+      } catch (error) {
+        console.error(error);
+      }
       Alert({ message: MessagesToastEnum.successEmail })
     } catch (e) {
       Alert({ message: MessagesToastEnum.errorEmail })
@@ -79,9 +79,9 @@ export function LandingPage() {
     <main className="content">
       <ToastContainer />
       <header className="header-initial">
-        {/* <img src={principalLogo}
+        <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
-          title="logo da marca paulorodriguesdev" /> */}
+          title="logo da marca paulorodriguesdev" />
         <section className="goal">
           <h2>Javascript sem enrolação</h2>
           <p>
@@ -118,37 +118,24 @@ export function LandingPage() {
           <h2>
             PARA QUEM É O CURSO?
           </h2>
-          <ul>
-            <li>Para quem deseja construir uma base sólida do javascript.</li>
-            <li>Pessoas que talvez nunca escreveram 1 linha se quer de código.</li>
-            <li>Quem talvez já é desenvolvedor mas não conhece o javascript como linguagem de programação.</li>
-          </ul>
+          <p>
+            Construa uma base sólida em JavaScript, mesmo que você nunca tenha escrito uma linha de código antes ou se já é desenvolvedor, mas não conhece JavaScript. Esse curso é perfeito para você! Aprenda passo a passo e domine essa linguagem de programação poderosa. Comece agora mesmo sua jornada no JavaScript de forma eficaz e objetiva.
+          </p>
         </article>
 
-        <article className="how-sigin">
+        <article className="differential">
           <h2>
-            COMO ME INSCREVER?
+            DIFERENCIAL
           </h2>
           <p>
-            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para o dia 05/06/2023.
-            <br/>Você pode garantir
-            sua vaga preenchendo o formulário abaixo com o seu melhor e-mail e ficando de olho para não perder essa
-            <strong> OPORTUNIDADE que pode transformar sua vida. </strong>
+            Existem muitos profissionais ensinando programação, então por que eu deveria ser mais um? Bem, além de ser programador, há mais de 11 anos, também atuo como pastor, cuidando das pessoas. Talvez você esteja se perguntando qual é a relação entre essas duas áreas. Independentemente da minha escolha religiosa, uma coisa é certa: ao longo desses 11 anos, desenvolvi uma verdadeira paixão pelo "ensino". Amar ensinar e presenciar o momento em que as pessoas começam a entender algo que antes parecia confuso é algo que me motiva profundamente. É por isso que, ao escolher este curso, você pode contar com uma abordagem didática sólida, eficaz e
+            <strong> simples </strong>
           </p>
         </article>
       </section>
 
       <hr />
-      <section className="differential">
-        <article className="text-explain">
-          <h2>
-            DIFERENCIAL
-          </h2>
-          <p>
-          Existem muitos profissionais ensinando programação, então por que eu deveria ser mais um? Bem, além de ser programador, há mais de 11 anos, também atuo como pastor, cuidando das pessoas. Talvez você esteja se perguntando qual é a relação entre essas duas áreas. Independentemente da minha escolha religiosa, uma coisa é certa: ao longo desses 11 anos, desenvolvi uma verdadeira paixão pelo "ensino". Amar ensinar e presenciar o momento em que as pessoas começam a entender algo que antes parecia confuso é algo que me motiva profundamente. É por isso que, ao escolher este curso, você pode contar com uma abordagem didática sólida, eficaz e <strong>simples</strong>.
-          </p>
-        </article>
-        <form className="form-email" id="form-email">
+        <form className="form-send-email" id="form-email">
           <h2>QUERO ME TORNAR UM DEV</h2>
           <div className="input-group">
             <label htmlFor="name">SEU NOME</label>
@@ -160,8 +147,6 @@ export function LandingPage() {
           </div>
           <button type="button" onClick={sendFormEmail} disabled={!formIsEnable}>EMBARCAR</button>
         </form>
-      </section>
-      <hr />
 
       <footer>
         <div className="social-medias">

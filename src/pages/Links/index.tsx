@@ -8,7 +8,7 @@ import { SectionLink } from "../../components";
 
 export function Links() {
   return (
-    <main className="content">
+    <main className="content-links">
       <header className="header-logo">
         <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
