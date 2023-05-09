@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 
 interface ISectionLink {
   icon: string,
-  name: string
-  href: string
+  textContent: string,
+  href: string,
+  target?: React.HTMLAttributeAnchorTarget,
 }
 
-export function SectionLink({ icon, name, href }: ISectionLink) {
+export function SectionLink({ icon, textContent, href, target="_blank" }: ISectionLink) {
   return (
     <section className="network">
-      <Link to={href} target="_blank">
-        <p className="name">{name}</p>
-        <img src={icon} alt={`Imagem da rede social de ${name}`} className="network-img" />
+      <Link to={href} target={target}  >
+        <p className="name">{textContent}</p>
+        <img src={icon} alt={`Imagem da rede social de ${textContent}`} className="network-img" />
       </Link>
     </section>
   );

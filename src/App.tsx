@@ -6,8 +6,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/javascript-sem-enrolacao" element={<LandingPage />} />
-        <Route path="*" element={<Links />} />
+        <Route path="*" element={<LandingPage />} />
+        <Route path="/links" element={<Links />} />
       </Routes>
     </Router>
   )

@@ -4,11 +4,7 @@
     background: black;
 }
 
-::-webkit-scrollbar-button {
-    background: $primaryColor;
-}
-
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-button, ::-webkit-scrollbar-track  {
     background: $primaryColor;
 }
 
@@ -40,7 +36,7 @@
         width: 100%;
     }
 
-    margin-top: 5%;
+    // margin-top: 5%;
 }
 
 .content {
@@ -83,6 +79,9 @@
             h2 {
                 margin: pxToRem(30) pxToRem(3) pxToRem(3);
                 font-size: pxToRem(80);
+                @media screen and (max-width: 600px) {
+                    font-size: pxToRem(50);
+                }             
                 color: white;
                 width: 100%;
                 font-family: Fira Sans Condensed;
@@ -92,11 +91,13 @@
 
             p {
                 margin-top: pxToRem(20);
-                font-size: pxToRem(30);
+                font-size: pxToRem(40);
+                @media screen and (max-width: 600px) {
+                    font-size: pxToRem(30);
+                }
                 color: $secondaryColor;
                 font-family: Fira Sans Condensed;
                 font-weight: 600;
-                line-height: pxToRem(30);
             }
 
             button {
@@ -137,7 +138,7 @@
             width: 50%;
             font-size: pxToRem(30);
             color: white;
-            text-align: center;
+            text-align: left;
             font-family: Fira Sans Condensed;
             line-height: pxToRem(40);
 
@@ -145,6 +146,7 @@
                 width: 100%;
                 font-size: pxToRem(20);
                 line-height: pxToRem(30);
+                margin: pxToRem(20);
             }
         }
 
@@ -173,12 +175,13 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
+                margin: pxToRem(30);
 
                 li {
                     width: 100%;
                     font-size: pxToRem(30);
                     color: white;
-                    text-align: center;
+                    text-align: left;
                     font-family: Fira Sans Condensed;
                     line-height: pxToRem(40);
                 }
@@ -186,13 +189,12 @@
         }
 
         .how-sigin {
+        
             width: 50%;
 
             @media screen and (max-width: 600px) {
                 margin-top: pxToRem(50);
             }
-
-            ;
 
             @include fillFullWidthInSmallScreen();
 
@@ -203,10 +205,11 @@
             }
 
             p {
+                margin-top: pxToRem(30);
                 width: 100%;
                 font-size: pxToRem(30);
                 color: white;
-                text-align: center;
+                text-align: left;
                 font-family: Fira Sans Condensed;
                 line-height: pxToRem(40);
 
@@ -229,10 +232,11 @@
             }
 
             p {
+                margin-top: pxToRem(30);
                 width: 100%;
                 font-size: pxToRem(30);
                 color: white;
-                text-align: center;
+                text-align: left;
                 font-family: Fira Sans Condensed;
                 line-height: pxToRem(40);
             }
@@ -247,6 +251,9 @@
             justify-content: stretch;
 
             h2 {
+                @media screen and (max-width: 600px) {
+                    margin-top: pxToRem(50);
+                }
                 color: $lightColor;
                 width: 100%;
             }

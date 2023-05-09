@@ -3,6 +3,7 @@ import principalLogo from '@assets/logo-principal.svg'
 import instagramIcon from '@assets/icon-instagram.svg'
 import githubIcon from '@assets/icon-github.svg'
 import youtubeIcon from '@assets/icon-youtube.svg'
+import jsIcon from '@assets/icon-js.svg'
 import { SectionLink } from "../../components";
 
 export function Links() {
@@ -17,9 +18,10 @@ export function Links() {
       </header>
 
       <section className="items-sections">
-        <SectionLink name={'@PAULORODRIGUESDEV'} icon={instagramIcon} href="https://www.instagram.com/paulorodriguesdev" />
-        <SectionLink name={'@PAULORODRIGUESDEVCODE'} icon={githubIcon} href="https://github.com/paulorodriguesdevcode" />
-        <SectionLink name={'@PAULORODRIGUESDEVCODE'} icon={youtubeIcon} href="https://www.youtube.com/@paulorodriguesdevcode" />
+        <SectionLink textContent={'QUERO APRENDER JAVASCRIPT'} icon={jsIcon} href="/" target="_self"/>
+        <SectionLink textContent={'@PAULORODRIGUESDEV'} icon={instagramIcon} href="https://www.instagram.com/paulorodriguesdev" />
+        <SectionLink textContent={'@PAULORODRIGUESDEVCODE'} icon={githubIcon} href="https://github.com/paulorodriguesdevcode" />
+        <SectionLink textContent={'@PAULORODRIGUESDEVCODE'} icon={youtubeIcon} href="https://www.youtube.com/@paulorodriguesdevcode" />
       </section>
 
       <footer className="copy-footer">

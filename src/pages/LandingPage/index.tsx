@@ -79,9 +79,9 @@ export function LandingPage() {
     <main className="content">
       <ToastContainer />
       <header className="header-initial">
-        <img src={principalLogo}
+        {/* <img src={principalLogo}
           alt="Uma logo com o nome paulorodriguesdev e uma escrita em binário de 'code'"
-          title="logo da marca paulorodriguesdev" />
+          title="logo da marca paulorodriguesdev" /> */}
         <section className="goal">
           <h2>Javascript sem enrolação</h2>
           <p>
@@ -101,10 +101,10 @@ export function LandingPage() {
           Nesse ano lá estava eu em uma sala de um curso técnico com a
           maioria dos alunos odiando a matéria de Lógica de Programação.
           Algum tempo passou, comecei a trabalhar como técnico em informática em uma “Big Tech” onde haviam muitos
-          desenvolvedores, fiz amizades e descobri a disparidade salarial, nessa época meu salário era de 1920.00R$ (não era
-          pouco para um jovem da minha idade), descobri então que um Dev Jr daquela empresa ganhava mais de 50% do que eu na
-          época, era o motivo que eu precisava! Fui pra casa, comecei os estudos e 6 meses depois... Meu primeiro trabalho
-          como Desenvolvedor de Softwares com um salário muito superior ao que eu ganhava como Téc de Suporte.
+          desenvolvedores. Fiz amizades e descobri a disparidade salarial. Nessa época, o meu salário era de R$1.920,00 (não era
+          pouco para um jovem da minha idade). Descobri então que um Dev Jr daquela empresa ganhava 50% a mais do que eu sendo Analista de Suporte 3.
+          Era o motivo que eu precisava! Fui para casa, comecei os estudos e 6 meses depois... Meu primeiro trabalho
+          como Desenvolvedor de Softwares com um salário muito superior ao que eu ganhava.
           De lá pra cá, passei por muitas empresas, desde empresas pequenas, fábricas de software até empresas com
           faturamentos bilionários.
         </p>
@@ -116,10 +116,10 @@ export function LandingPage() {
       <section className="course">
         <article className="about-course">
           <h2>
-            SOBRE O CURSO
+            PARA QUEM É O CURSO?
           </h2>
           <ul>
-            <li>Quem deseja construir uma base sólida do javascript.</li>
+            <li>Para quem deseja construir uma base sólida do javascript.</li>
             <li>Pessoas que talvez nunca escreveram 1 linha se quer de código.</li>
             <li>Quem talvez já é desenvolvedor mas não conhece o javascript como linguagem de programação.</li>
           </ul>
@@ -130,7 +130,8 @@ export function LandingPage() {
             COMO ME INSCREVER?
           </h2>
           <p>
-            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para 05/06/2023, você pode garantir
+            Esse curso já está na fase final de desenvolvimento e o lançamento está previsto para o dia 05/06/2023.
+            <br/>Você pode garantir
             sua vaga preenchendo o formulário abaixo com o seu melhor e-mail e ficando de olho para não perder essa
             <strong> OPORTUNIDADE que pode transformar sua vida. </strong>
           </p>
@@ -144,12 +145,7 @@ export function LandingPage() {
             DIFERENCIAL
           </h2>
           <p>
-            Tem muita gente por ai ensinando programação, então porque mais um?
-            Bom, além de programador eu há pelo menos 11 anos cuido de pessoas e hoje sou Pastor.
-            O que é que isso tem a ver?
-            Independente da minha opção religiosas, algo é inegável:
-            nesses 11 anos me apaixonei pelo “ENSINO”, amo ensinar,  ver pessoas entendendo algo que antes não fazia sentido
-            e é por isso que se existe algo que você pode apostar nesse curso é <strong>DIDÁTICA</strong>.
+          Existem muitos profissionais ensinando programação, então por que eu deveria ser mais um? Bem, além de ser programador, há mais de 11 anos, também atuo como pastor, cuidando das pessoas. Talvez você esteja se perguntando qual é a relação entre essas duas áreas. Independentemente da minha escolha religiosa, uma coisa é certa: ao longo desses 11 anos, desenvolvi uma verdadeira paixão pelo "ensino". Amar ensinar e presenciar o momento em que as pessoas começam a entender algo que antes parecia confuso é algo que me motiva profundamente. É por isso que, ao escolher este curso, você pode contar com uma abordagem didática sólida, eficaz e <strong>simples</strong>.
           </p>
         </article>
         <form className="form-email" id="form-email">
@@ -159,7 +155,7 @@ export function LandingPage() {
             <input type="text" value={name} id="name" disabled={!formIsEnable} onChange={(event) => setName(event.target.value)} />
           </div>
           <div className="input-group">
-            <label htmlFor="email">SEU MELHOR EMAIL</label>
+            <label htmlFor="email">SEU MELHOR E-MAIL</label>
             <input type="email" value={email} id="email" disabled={!formIsEnable} onChange={(event) => setEmail(event.target.value)} />
           </div>
           <button type="button" onClick={sendFormEmail} disabled={!formIsEnable}>EMBARCAR</button>
